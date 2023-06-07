@@ -1,1 +1,2 @@
-My first readme
+describing what each script is doing
+
