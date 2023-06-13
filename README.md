@@ -1,1 +1,1 @@
-My first readme
+variables and expansons project
