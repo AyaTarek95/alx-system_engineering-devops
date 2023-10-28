@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Terminates 7-hilander
+pkill -f 7-highlander
