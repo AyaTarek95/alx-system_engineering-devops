@@ -32,13 +32,11 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-frontend haproxy-config
+		frontend haproxy-config
         bind *:80
-        mode http
+        bind *:443 ssl crt /etc/letsencrypt/live/www.ayatarek.tech/haproxy.pem
         default_backend backend-config
 backend backend-config
         balance roundrobin
-        option httpclose
-        option forwardfor
-        server 433268-web-01 54.237.101.225:80 check
-        server 433268-web-02 18.207.1.65:80 check
+        server 441211-web-01 100.26.254.92:80 check
+        server 441211-web-02 54.145.79.81:80 check
