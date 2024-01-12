@@ -38,5 +38,5 @@ defaults
         default_backend backend-config
 backend backend-config
         balance roundrobin
-        server 441211-web-01 100.26.254.92:80 check
-        server 441211-web-02 54.145.79.81:80 check
+        server 433268-web-01 54.237.101.225:80 check
+        server 433268-web-02 18.207.1.65:80 check
