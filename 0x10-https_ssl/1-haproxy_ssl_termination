@@ -8,7 +8,7 @@ global
         group haproxy
         daemon
 
-        # default SSL location
+        # Default SSL material locations
         ca-base /etc/ssl/certs
         crt-base /etc/ssl/private
 
@@ -32,11 +32,11 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-		frontend haproxy-config
+
+frontend haproxy-config
         bind *:80
         bind *:443 ssl crt /etc/letsencrypt/live/www.ayatarek.tech/haproxy.pem
-        default_backend backend-config
+
 backend backend-config
-        balance roundrobin
         server 433268-web-01 54.237.101.225:80 check
         server 433268-web-02 18.207.1.65:80 check
